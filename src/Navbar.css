@@ -1,0 +1,195 @@
+.navbar {
+    background-color: white; /* bg-white */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+    position: fixed; /* fixed */
+    width: 100%; /* w-full */
+    z-index: 50; /* z-50 */
+  }
+  .nav-container {
+    max-width: 1280px; /* max-w-7xl (7xl = 1280px) */
+    margin: 0 auto; /* mx-auto: centers the container horizontally */
+    padding-left: 16px; /* px-4 (1rem = 16px) */
+    padding-right: 16px; /* px-4 */
+  }
+  
+  @media (min-width: 640px) { /* sm breakpoint (640px and above) */
+    .nav-container {
+      padding-left: 24px; /* sm:px-6 (1.5rem = 24px) */
+      padding-right: 24px;
+    }
+  }
+  
+  @media (min-width: 1024px) { /* lg breakpoint (1024px and above) */
+    .nav-container {
+      padding-left: 32px; /* lg:px-8 (2rem = 32px) */
+      padding-right: 32px;
+    }
+  }
+  .nav-bar-content {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    justify-content: space-between; /* justify-between */
+    height: 64px; /* h-16 (16 * 4 = 64px) */
+  }
+  .flex-center {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+  }
+  .text-styling {
+    font-size: 1.25rem; /* text-xl (1.25rem = 20px) */
+    font-weight: bold; /* font-bold */
+    color: #2563eb; /* text-blue-600 */
+  }
+  .navbar-links {
+    display: flex; /* hidden */
+  }
+  
+  @media (max-width: 768px) { /* md breakpoint (768px and above) */
+    .navbar-links {
+      display: none; /* md:flex */
+      gap: 1rem; /* space-x-4 (1rem = 16px) */
+    }
+  }
+  @media (min-width: 768px) { /* md breakpoint (768px and above) */
+    .hidden-md {
+      display: none; /* hides element on medium and larger screens */
+    }
+  }
+  
+  .text-gray-hover {
+    color: #4b5563; /* text-gray-600 */
+  }
+  
+  .text-gray-hover:hover {
+    color: #2563eb; /* hover:text-blue-600 */
+  }
+  
+  .md-hidden {
+    display: none; /* md:hidden */
+  }
+  
+  @media (max-width: 768px) { /* md breakpoint (768px and above) */
+    .md-hidden {
+      display: block; /* makes the element visible on medium screens and above */
+    }
+  }
+  
+  .absolute-position {
+    position: absolute; /* absolute */
+    left: 0; /* left-0 */
+    right: 0; /* right-0 */
+    top: 4rem; /* top-16 (16 * 0.25rem = 4rem) */
+    background-color: white; /* bg-white */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  }
+  .padding-top-bottom {
+    padding-top: 0.5rem; /* pt-2 (0.5rem = 8px) */
+    padding-bottom: 1rem; /* pb-4 (1rem = 16px) */
+  }
+
+  .relative-group {
+    position: relative; /* relative */
+  }
+
+  .flex-items-center {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    padding-left: 1rem; /* px-4 (1rem = 16px) */
+    padding-right: 1rem; /* px-4 */
+    padding-top: 0.25rem; /* py-1 (0.25rem = 4px) */
+    padding-bottom: 0.25rem; /* py-1 */
+    color: #4b5563; /* text-gray-800 */
+    transition: color 0.3s ease; /* transition-colors */
+  }
+  
+  .flex-items-center:hover {
+    color: #2563eb; /* hover:text-blue-600 */
+  }
+  
+  .absolute-style {
+    position: absolute; /* absolute */
+    z-index: 50; /* z-50 */
+    left: 0; /* left-0 */
+    margin-top: 0.5rem; /* mt-2 (0.5rem = 8px) */
+    width: 12rem; /* w-48 (12rem = 192px) */
+    background-color: white; /* bg-white */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    border-radius: 0.375rem; /* rounded-md (0.375rem = 6px) */
+    border: 1px solid #d1d5db; /* border (Tailwind’s default gray-300) */
+    opacity: 0; /* opacity-0 */
+    visibility: hidden; /* invisible */
+    transition: all 0.2s ease; /* transition-all duration-200 */
+  }
+  
+  .relative-group:hover .absolute-style {
+    opacity: 1; /* group-hover:opacity-100 */
+    visibility: visible; /* group-hover:visible */
+  }
+
+  .flex-items {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    justify-content: space-between; /* justify-between */
+    padding-left: 1rem; /* px-4 (1rem = 16px) */
+    padding-right: 1rem; /* px-4 */
+    padding-top: 0.5rem; /* py-2 (0.5rem = 8px) */
+    padding-bottom: 0.5rem; /* py-2 */
+    cursor: pointer; /* cursor-pointer */
+    transition: background-color 0.3s ease; /* smooth transition for background-color */
+  }
+  
+  .flex-items:hover {
+    background-color: #f3f4f6; /* hover:bg-gray-100 (Light gray background color) */
+  }
+  .icon-style {
+    margin-left: 0.5rem; /* ml-2 (0.5rem = 8px) */
+    width: 1rem; /* w-4 (1rem = 16px) */
+    height: 1rem; /* h-4 (1rem = 16px) */
+    display: inline-block; /* inline-block */
+    transform: rotate(0deg); /* rotate-[-90deg] */
+}
+
+  .absolute-positioned {
+    position: absolute; /* absolute */
+    left: 100%; /* left-full (places the element to the right of its parent) */
+    top: 0; /* top-0 (aligns the top edge of the element with the top of its parent) */
+    margin-top: 0; /* mt-0 (no margin-top) */
+    width: 12rem; /* w-48 (12rem = 192px) */
+    background-color: white; /* bg-white */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    border-radius: 0.375rem; /* rounded-md (0.375rem = 6px) */
+    border: 1px solid #d1d5db; /* border (default gray-300) */
+  }
+  .button-style {
+    padding-left: 1rem; /* px-4 (1rem = 16px) */
+    padding-right: 1rem; /* px-4 */
+    padding-top: 0.5rem; /* py-2 (0.5rem = 8px) */
+    padding-bottom: 0.5rem; /* py-2 */
+    cursor: pointer; /* cursor-pointer */
+    transition: background-color 0.3s ease; /* smooth transition for background-color */
+  }
+  
+  .button-style:hover {
+    background-color: #f3f4f6; /* hover:bg-gray-100 (Light gray background color) */
+  }
+  .border-bottom {
+    border-bottom: 1px solid #e5e7eb; /* border-b (Tailwind's default gray-200 for border color) */
+  }
+  
+  .border-bottom:last-child {
+    border-bottom: none; /* last:border-b-0 (removes border for the last child element) */
+  }
+  .flex-container {
+    display: flex; /* flex */
+    justify-content: space-between; /* justify-between */
+    align-items: center; /* items-center */
+    padding-left: 1rem; /* px-4 (1rem = 16px) */
+    padding-right: 1rem; /* px-4 */
+    padding-top: 0.75rem; /* py-3 (0.75rem = 12px) */
+    padding-bottom: 0.75rem; /* py-3 */
+    cursor: pointer; /* cursor-pointer */
+  }
+  .pl-4 {
+    padding-left: 1rem; /* pl-4 (1rem = 16px) */
+  }
+      
